@@ -7,18 +7,18 @@ public class frequencycounter{
                 int rem = n%10;
                 if(rem==d)
                 count++;
-                n = n/10;
-            }
-            return count;
+            n = n/10;
         }
-}
-public static void main(String[] args){
-     Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    int d = sc.nextInt();
-    int count = frequencycount(n,d);
-    System.out.println(count);
+        return count;
+    }
 
-    sc.close();
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d = sc.nextInt();
+        int count = frequencycount(n,d);
+        System.out.println(count);
 
+        sc.close();
+    }
 }
