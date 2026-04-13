@@ -6,11 +6,11 @@ public class arrmax {
         }
         int smallans = maxnumarr(arr, i + 1);
         return Math.max(arr[i], smallans);
-        }
     }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5  };
         System.out.println(maxnumarr(arr, 0));
     }
 }
+
         
