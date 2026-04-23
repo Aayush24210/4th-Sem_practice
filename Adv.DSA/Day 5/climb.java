@@ -1,12 +1,12 @@
-//print the tosses of a coin using recursion where there are four possible outputs
-public class coincross {
+//climb n no. of stairs 
+public class climb {
     static void toss(int n, String str) {
         if (n == 0) {
             System.out.println(str);
             return;
         }
-        toss(n - 1, str + "ghop");
-        toss(n - 1, str + "ghop");
+        toss(n - 1, str + "step1");
+        toss(n - 1, str + "step2");
     }
 
     public static void main(String[] args) {

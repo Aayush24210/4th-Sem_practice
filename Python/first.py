@@ -1,5 +1,3 @@
-print("hello")
-a=12
-b=4
-c=7
-print(a+b+c)
+# write a code to print list comprehension of  sum of the given line
+list = [[1,2,3],[3,4,5],[5,7,3,2]]
+
