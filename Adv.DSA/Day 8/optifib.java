@@ -1,7 +1,6 @@
 // write a code to find the nth fibonacci number using optimal approach
 import java.util.Arrays;
 
-
 public class optifib{
 public static  int fib(int n ,int [] dp){
     if(n<=1){

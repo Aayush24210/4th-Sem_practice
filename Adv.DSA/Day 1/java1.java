@@ -18,7 +18,7 @@
 // }
 
 
-class recursion{
+class java1{
     public static void main(String[] args) {
         String str1 = "abc";
         int count = 0;

@@ -1,15 +1,27 @@
 // count the numbers of digits in a number in optimal way (memoization approach)
 
 public class countdigit {
-    public static int count(int n){
+    public static int count(int n, int[] dp){
         if(n==0){
             return 0;
         }
-        return 1 + count(n/10);
+        if(dp[n] != -1){
+            return dp[n];
+        }
+        if (dp[n] != -1) {
+            return dp[n];
+        }
+
+        dp[n] = 1 + count(n/10, dp);
+        return dp[n];
     }
     public static void main(String[] args) {
         int n = 12345;
-        System.out.println(count(n));
+        int[] dp = new int[n + 1];
+        for(int i = 0; i <= n; i++) {
+            dp[i] = -1;
+        }
+        System.out.println(count(n, dp));
     }
 }
 
