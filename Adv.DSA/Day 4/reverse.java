@@ -1,5 +1,5 @@
 //reverse a number using recursion
-import java .util.*;
+
 public class reverse {
     static int revnumber(int n , int rev)
     {

@@ -1,5 +1,5 @@
 // arraycounter 
-import java.util.*; 
+
 public class arraycounter {
     static int count(int arr[],int i, int key){
          if ( i == arr. length) return 0;
