@@ -10,11 +10,11 @@ public class power {
     }
 
     public static void main(String[] args) {
-        Scanner Sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value of x: ");
-        int x = Sc.nextInt();
+        int x = sc.nextInt();
         System.out.print("Enter the value of n: ");
-        int n = Sc.nextInt();
+        int n = sc.nextInt();
         int result = findPower(x, n);
         System.out.println(x + " raised to the power of " + n + " is: " + result);
     }
