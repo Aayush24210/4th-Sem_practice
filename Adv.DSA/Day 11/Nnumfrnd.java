@@ -12,3 +12,6 @@ public class Nnumfrnd {
 
 }
 // next question kya h 
+// arrange n num of frnds
+                                
+
