@@ -1,26 +1,26 @@
-Sum();
-function Sum() {
-    console.log("Hello");
-} // Hello   // In this you can call the function before & after the function declaration because of hoisting.
+// Sum();
+// function Sum() {
+//     console.log("Hello");
+// } // Hello   // In this you can call the function before & after the function declaration because of hoisting.
 
 
 
 
 
-// But in arrow function you cannot call the function before the declaration because it is not hoisted.
-sum();
-const sum = () => {
-    console.log("Hello");
-} // Uncaught ReferenceError: Cannot access 'sum' before initialization
+// // But in arrow function you cannot call the function before the declaration because it is not hoisted.
+// sum();
+// // const sum = () => {
+//     console.log("Hello");
+// // } // Uncaught ReferenceError: Cannot access 'sum' before initialization
 
 
 
-console.log(a);
-var a = 5; // undefined   // In this you can access the variable before the declaration because of hoisting. 
+// console.log(a);
+// var a = 5; // undefined   // In this you can access the variable before the declaration because of hoisting. 
 
 
-console.log(b);
-let b = 10; // Uncaught ReferenceError: Cannot access 'b' before initialization
+// console.log(b);
+// let b = 10; // Uncaught ReferenceError: Cannot access 'b' before initialization
 
 
 
@@ -61,3 +61,32 @@ arr.filter((a) => {
 arr.forEach((a, b, c) => {
     console.log(c,forEach);
 }); // [1, 2, 3, 4, 5] forEach
+
+
+let sum = arr.reduce((a,b,c,d) => {
+console.log(a,"Mai a hun");
+console.log(b,"Mai b hun");
+console.log(c,"Mai c hun");
+console.log(d,"Mai d hun");
+
+})
+
+arr=[1,2,3,4,5,6,6,3,6,3,345,7]//values which is bigger than 2 and all even numbers sum 
+
+let biggerThan2 = arr.filter((a) => {
+    return a > 2;// [3, 4, 5, 6, 6, 3, 6, 3, 345, 7] biggerThan2
+})
+console.log(biggerThan2,"biggerThan2"); // [3, 4, 5, 6, 6, 3, 6, 3, 345, 7] biggerThan2
+
+let evenNumbers = arr.filter((a) => {
+    return a % 2 === 0;
+})
+console.log(evenNumbers,"evenNumbers"); // [2, 4, 6, 6, 6] evenNumbers
+
+let sumOfEvenNumbers = evenNumbers.reduce((a,b) => {
+    return a + b;
+})
+
+console.log(sumOfEvenNumbers,"sumOfEvenNumbers"); // 24 sumOfEvenNumbers
+
+
