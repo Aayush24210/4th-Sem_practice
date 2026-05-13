@@ -90,3 +90,76 @@ let sumOfEvenNumbers = evenNumbers.reduce((a,b) => {
 console.log(sumOfEvenNumbers,"sumOfEvenNumbers"); // 24 sumOfEvenNumbers
 
 
+
+
+
+
+
+
+// let h1 = document.getElementById("kyaa");
+// // let h2 = document.querySelector("h2");
+
+// h1.style.color = "red";
+// h1.style.fontSize = "50px";
+// h1.style.textAlign = "center";
+// console.log(h1[0].innerFlex);
+
+// for(let a of h1){
+//     a.style.color = "red";
+// }
+
+// console.log(h1,"kyaa");
+
+// let h1 = document.getElementById("kyaa");
+// console.log(h1[0].innerText());
+
+//  let h3 = document.querySelectorAll("h1");
+
+//  let name = prompt("Enter your name");
+//  h3[0].innerText = `Welcome ${name} to JavaScript Day 5`;
+
+// next 
+// let h1 = document.getElementById("kyaa");
+// h1.innerText = "Welcome to JavaScript Day 5";
+
+// let h1 = document.querySelector("h1")
+//     let p = document.querySelector("p")
+    
+//     h1.innerText = "Welcome to JavaScript Day 5"
+//     p.innerText = "This is a paragraph"
+
+// let button = document.querySelector("button")
+    // button.style.backgroundColor = "purple"
+    // button.style.fontSize = "50px"
+
+    // let inp = document.querySelector("input")
+    // let h2 = document.querySelector("h2")
+//  let inp = document.querySelector("input")
+//     let h2 = document.querySelector("h2")
+
+    // inp.addEventListener("input", function(e){
+        // console.log(e.target.value);
+        // h2.innerText = e.target.value;
+    // })
+
+    // By clicking the button the data will show which is innput 
+
+
+    // inp.addEventListener("input", function(e){
+    //     // console.log(e.target.value);
+    //     h2.innerText = e.target.value;
+    // })
+
+    // // By clicking the button the data will show which is innput 
+
+
+
+    // button.addEventListener("click", function(){
+    //     console.log("Hello");
+              
+    //     h2.innerText = inp.value;
+
+    // })
+
+
+    // eval()
