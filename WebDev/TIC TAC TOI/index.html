@@ -79,82 +79,138 @@
 
     <!-- JavaScript: This makes the game actually work -->
     <script>
-        const cells = document.querySelectorAll('.cell');
-        const statusText = document.getElementById('status');
-        let board = ["", "", "", "", "", "", "", "", ""];
-        let currentPlayer = "X";
-        let running = true;
+        // const cells = document.querySelectorAll('.cell');
+        // const statusText = document.getElementById('status');
+        // let board = ["", "", "", "", "", "", "", "", ""];
+        // let currentPlayer = "X";
+        // let running = true;
 
-        const winConditions = [
-            [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-            [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-            [0, 4, 8], [2, 4, 6]             // Diagonals
-        ];
+        // const winConditions = [
+        //     [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+        //     [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+        //     [0, 4, 8], [2, 4, 6]             // Diagonals
+        // ];
 
-        // Add a click event to every cell
-        cells.forEach(cell => cell.addEventListener('click', cellClicked));
+        // // Add a click event to every cell
+        // cells.forEach(cell => cell.addEventListener('click', cellClicked));
 
-        function cellClicked() {
-            const cellIndex = this.getAttribute('data-index');
+        // function cellClicked() {
+        //     const cellIndex = this.getAttribute('data-index');
 
-            // If cell is full or game is over, do nothing
-            if (board[cellIndex] !== "" || !running) {
-                return;
-            }
+        //     // If cell is full or game is over, do nothing
+        //     if (board[cellIndex] !== "" || !running) {
+        //         return;
+        //     }
 
-            // Update board and UI
-            board[cellIndex] = currentPlayer;
-            this.textContent = currentPlayer;
+        //     // Update board and UI
+        //     board[cellIndex] = currentPlayer;
+        //     this.textContent = currentPlayer;
 
-            checkWinner();
-        }
+        //     checkWinner();
+        // }
 
-        function checkWinner() {
-            let roundWon = false;
+        // function checkWinner() {
+        //     let roundWon = false;
 
-            for (let i = 0; i < winConditions.length; i++) {
-                const condition = winConditions[i];
-                const cellA = board[condition[0]];
-                const cellB = board[condition[1]];
-                const cellC = board[condition[2]];
+        //     for (let i = 0; i < winConditions.length; i++) {
+        //         const condition = winConditions[i];
+        //         const cellA = board[condition[0]];
+        //         const cellB = board[condition[1]];
+        //         const cellC = board[condition[2]];
 
-                if (cellA === "" || cellB === "" || cellC === "") {
-                    continue;
-                }
-                if (cellA === cellB && cellB === cellC) {
-                    roundWon = true;
-                    break;
-                }
-            }
+        //         if (cellA === "" || cellB === "" || cellC === "") {
+        //             continue;
+        //         }
+        //         if (cellA === cellB && cellB === cellC) {
+        //             roundWon = true;
+        //             break;
+        //         }
+        //     }
 
-            if (roundWon) {
-                statusText.textContent = `Player ${currentPlayer} Wins!`;
-                running = false;
-            } else if (!board.includes("")) {
-                statusText.textContent = "It's a Draw!";
-                running = false;
-            } else {
-                // Switch players
-                currentPlayer = (currentPlayer === "X") ? "O" : "X";
-                statusText.textContent = `Player ${currentPlayer}'s Turn`;
-            }
+        //     if (roundWon) {
+        //         statusText.textContent = `Player ${currentPlayer} Wins!`;
+        //         running = false;
+        //     } else if (!board.includes("")) {
+        //         statusText.textContent = "It's a Draw!";
+        //         running = false;
+        //     } else {
+        //         // Switch players
+        //         currentPlayer = (currentPlayer === "X") ? "O" : "X";
+        //         statusText.textContent = `Player ${currentPlayer}'s Turn`;
+        //     }
 
-            resetButton();
-        }
+        //     resetButton();
+        // }
 
-        function resetButton() {
-            const resetButton = document.getElementById('reset');
-            resetButton.addEventListener('click', resetGame);
-        }
+        // function resetButton() {
+        //     const resetButton = document.getElementById('reset');
+        //     resetButton.addEventListener('click', resetGame);
+        // }
 
-        function resetGame() {
-            board = ["", "", "", "", "", "", "", "", ""];
-            currentPlayer = "X";
-            running = true;
-            statusText.textContent = `Player ${currentPlayer}'s Turn`;
-            cells.forEach(cell => cell.textContent = "");
-        }
-    </script>
+        // function resetGame() {
+        //     board = ["", "", "", "", "", "", "", "", ""];
+        //     currentPlayer = "X";
+        //     running = true;
+        //     statusText.textContent = `Player ${currentPlayer}'s Turn`;
+        //     cells.forEach(cell => cell.textContent = "");
+        // }
+
+
+// setTimeout(() => {
+//     console.log("A");
+    
+// }, 0);
+// setTimeout(() => {
+// }, console.log("B"),1000);
+
+// setTimeout(() => {
+// }, console.log("C"),2000
+// )
+// setTimeout(() => {
+    
+// }, 1000);
+// console.log("D")
+
+
+
+
+
+function step1(fn){
+setTimeout(() => {
+    console.log("SELECTED");
+}, 4000);
+fn()
+}
+function step2(fn){
+    setTimeout(() => {
+        console.log("pikachuu");
+    }, 3000);
+    fn()
+}
+function step3(){
+    setTimeout(() => {
+        console.log("jaoo");
+    }, 2000);
+}
+function step4(){
+    setTimeout(() => {
+        console.log("fhuddi khelo");
+        
+    }, 1000);
+}
+step1(function(){
+    step2(function(){
+        step3(function(){
+            
+        })
+    })
+})
+
+    </script>      
 
 </body>
 </html>
+
+<!-- synchronous or asynchronous  -->
+
+
