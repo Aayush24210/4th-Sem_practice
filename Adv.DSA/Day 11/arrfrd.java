@@ -13,10 +13,10 @@ public class arrfrd {
     }
 
     public static void main(String[] args) {
-        int n =3;
-        int [] dp  = new (n+1);
-        Arrays.fill(dp, -1);
-        System.out.println(arngfrnd(n, dp));
+        // int n =3;
+        // int [] dp  = new (n+1);
+    //     Arrays.fill(dp, -1);
+    //     System.out.println(arngfrnd(n, dp));
     }
 }
 

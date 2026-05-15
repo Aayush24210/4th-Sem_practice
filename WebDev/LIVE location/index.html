@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Location Tracker</title>
+    <style>
+        /* CSS Styling to match the UI */
+        body {
+            background-color: #2cb3ff; /* Matching the light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        button {
+            background-color: #2188ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 15px 0 25px 0;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0366d6;
+        }
+
+        .info {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .info p {
+            margin: 12px 0;
+            font-size: 0.95rem;
+            color: #111;
+        }
+
+        .info span {
+            font-weight: 400;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2><b>📍<i> Live Location Tracker</i></b></h2>
+        
+        <button id="getLocationBtn">Get My Location</button>
+        <div class="pulse"></div>
+        <div class="live dot"></div>
+        <div class="info">
+            <p><strong>City :</strong> <span id="city">...</span></p>
+            <p><strong>Area :</strong> <span id="area">...</span></p>
+            <p><strong>State :</strong> <span id="state">...</span></p>
+            <p><strong>Country :</strong> <span id="country">...</span></p>
+            <p><strong>Pincode :</strong> <span id="pincode">...</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+       
