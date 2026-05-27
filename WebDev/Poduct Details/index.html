@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+        body {
+            background-color: #3371ff; /* Slightly softened the blue for readability */
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        
+        #product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 21px;
+            background-color: rgb(219, 212, 92); /* Added so text is readable against the blue background */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Placed the cart button at the top -->
+    <a href="addTocart.html">
+        <button><b>🛒 View Cart</b></button>
+    </a>
+
+    <div id="product-container"></div>
+
+    <script>
+        // Changed endpoint to "/products" to get the full array, instead of just product #1
+        fetch("https://dummyjson.com/products")
+            .then((response) => response.json())
+            .then((data) => {
+                const container = document.getElementById("product-container");
+                let htmlString = ""; 
+
+                // Loop through the products array
+                data.products.map((a) => {
+                    // Used backticks (`) for the template literal and ${} for variables
+                    htmlString += `
+                        <div class="product-card">
+                            <img src="${a.thumbnail}" width="100px" height="100px" alt="${a.title}">
+                            <br>
+                            <h2>${a.title}</h2>
+                            <h3>${a.brand ? a.brand : 'No Brand'}</h3>
+                            <h3>$${a.price}</h3>
+                            <button onclick"addtoCart"$(a.id) >Add To Cart</button>
+                        </div>
+                    `;
+                });
+                window.allp=data.products
+                
+                // Update the DOM once, which is much better for performance
+                container.innerHTML = htmlString;
+            })
+            
+function addtoCart(id){
+    // console.log(id);
+ let data=    window.allP.find((a)=>{
+        return a.id==id
+
+    })
+    console.log(data);
+    localStorage.setItem("item",JSON.stringify(data)) 
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+           let body=   document.querySelector("body")
+        let data=  JSON.parse(localStorage.getItem("item")) 
+        body.innerHTML+=  `<div style="border:1px solid black;
+           padding:20px;
+           margin:20px;
+           width:300px;
+           border-radius:21px"> 
+           <img src="${data.
+            thumbnail}" width="100px">
+            <h2>  ${data.title}</h2>
+            <h2>  ${data.brand}</h2>
+            </div>`
+    </script>
+</body>
+</html>
