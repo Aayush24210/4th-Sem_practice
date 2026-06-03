@@ -41,6 +41,7 @@ import org.w3c.dom.Node;
 public class Linkedlist {
 
 void nthnode(int n){
+    Node head;
     
     Node first = head;
     Node second  = head;
