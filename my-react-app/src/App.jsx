@@ -1,104 +1,88 @@
-import { useState } from 'react'
-import './App.css'
+// import React, { useEffect, useState } from "react";
+// import "./App.css";
 
-function App() {
-  const [task, setTask] = useState('')
-  const [todos, setTodos] = useState([])
+// const Todo = () => {
+//   const [task, setTask] = useState("");
+//   let [index,SetIndex]=useState(null)
+//   const [todos, setTodos] = useState(()=>{
+//     let data=  localStorage.getItem("key")
+//     if(data){
+//         return JSON.parse(data)
+//     }
+//     return []
+//   });
+//   useEffect(()=>{
+//     localStorage.setItem("key",JSON.stringify(todos))
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    const trimmed = task.trim()
-    if (!trimmed) return
+//   },[todos])
 
-    setTodos((current) => [
-      ...current,
-      { id: Date.now(), text: trimmed, completed: false },
-    ])
-    setTask('')
-  }
+//   function edit(index){
+//     setTask(todos[index])
+//     SetIndex(index)
 
-  const toggleTodo = (id) => {
-    setTodos((current) =>
-      current.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
-      ),
-    )
-  }
+//   }
 
-  const deleteTodo = (id) => {
-    setTodos((current) => current.filter((todo) => todo.id !== id))
-  }
+//   function handleAorUpdate(){
+//     if(task.trim()==""){
+//         return;
+//     }
+//     console.log("helloooooo");
+    
+//     if(index!==null){
+//         let updateDATA=[...todos]
+//         updateDATA[index]=task
+//         setTodos(updateDATA)
+//     }else{
+//         setTodos([...todos,task])
+//         setTask("")
+//     }
+//   }
+//   function d(id){
+//    let d= todos.filter((a,b)=>{
+//         return id!=b
 
-  const clearCompleted = () => {
-    setTodos((current) => current.filter((todo) => !todo.completed))
-  }
+//     })
+//     setTodos(d)
 
-  const remainingCount = todos.filter((todo) => !todo.completed).length
+//   }
 
-  return (
-    <div className="todo-page">
-      <div className="todo-card">
-        <h1 className="todo-heading">Todo App</h1>
+//   return (
+//     <div className="container">
+//       <h1>Todo List</h1>
 
-        <form className="todo-form" onSubmit={handleSubmit}>
-          <input
-            className="todo-input"
-            type="text"
-            value={task}
-            onChange={(event) => setTask(event.target.value)}
-            placeholder="Enter a new task"
-          />
-          <button className="todo-add-button" type="submit">
-           <b> Add </b>
-          </button>
-        </form>
+//       <div className="input-box">
+//         <input
+//           type="text"
+//           name="task"
+//           value={task}
+//           placeholder="Enter a task"
+//           onChange={(e)=>setTask(e.target.value)}
+  
+//         />
 
-        <div className="todo-toolbar">
-          <span>{remainingCount} task{remainingCount === 1 ? '' : 's'} left</span>
-          {todos.some((todo) => todo.completed) && (
-            <button className="todo-clear-button" type="button" onClick={clearCompleted}>
-              Clear completed
-            </button>
-          )}
-        </div>
+// <button onClick={handleAorUpdate}>
+//     {index!==null?"update":"Add"}
+//     </button>
+//       </div>
+//       <div className="todo-list">
+//         {todos.map((todo, index) => (
+//           <div className="todo-item" key={index}>
+//             <span>{todo}</span>
 
-        <ul className="todo-list">
-          {todos.length === 0 ? (
-            <li className="todo-empty">No todos yet. Add one to get started.</li>
-          ) : (
-            todos.map((todo) => (
-              <li
-                key={todo.id}
-                className={`todo-item ${todo.completed ? 'todo-item-completed' : ''}`}
-              >
-                <button className="todo-check-button" onClick={() => toggleTodo(todo.id)}>
-                  {todo.completed ? '✔' : ''}
-                </button>
-                <span className="todo-text">{todo.text}</span>
-                <button className="todo-delete-button" onClick={() => deleteTodo(todo.id)}>
-                  Delete
-                </button>
-              </li>
-            ))
-          )}
-        </ul>
-      </div>
-    </div>
-  )
-}
+//             <div className="actions">
+//               <button onClick={()=>edit(index)}>
+//                 Edit
+//               </button>
 
-export default App
+//               <button  onClick={()=>d(index)}>
+//                 Delete
+//               </button>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// export default Todo;
