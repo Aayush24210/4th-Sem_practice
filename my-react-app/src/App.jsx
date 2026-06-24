@@ -158,7 +158,7 @@
 
 // const App= ()=> {
 //   let [searchData,SearchData]= useState('')
-//   let GenAI = new GogleGenerativeAi("AQ.Ab8RN6IPZJZz2pI7qJQgVSdBsSMuaXMTxxqLjH0gYAS5d_mzBg")
+
 // }
 
 
